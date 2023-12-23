@@ -2,12 +2,12 @@ import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
-
+///change 
 export default function Hearo() {
   return (
     <>
       
-      <div className="bg-white ">
+      <div className="bg-white bg-black">
         <div className="fix  px-6 pt-14 lg:px-8">
           <div
             className=" absolute inset-x-0 -top-30  transform-gpu overflow-hidden blur-3xl sm:-top-80"
