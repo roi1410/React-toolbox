@@ -9,11 +9,17 @@ const SessionsComponent = () => {
         "M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z",
     },
     {
+      head: "yeden tv",
+      litleHead: "Safari on iPhone",
+      svg_D:
+        "M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z",
+    }, {
       head: "Rome 24.456.355.98",
       litleHead: "Safari on iPhone",
       svg_D:
         "M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z",
-    },
+    }
+   
   ];
 
   return (

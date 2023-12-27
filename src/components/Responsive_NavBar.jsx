@@ -12,7 +12,9 @@ const navigation = [
   { name: 'AllForms', to: 'AllForms' },
   { name: 'Cloudinary', to: 'Cloudinary' },
   { name: 'LocalStorege', to: 'LocalStorege' },
-  {name:"APIAxius",to:"APIAxius"}
+  {name:"APIAxius",to:"APIAxius"},
+  {name:"DBmain",to:"DBmain"},
+  
 ]
 
 export default function NavBar() {

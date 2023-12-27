@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-import TaillwindBtn from "./TailwindCompnents/TailwindBtn";
-import TailwindDarkmodeBtn from "./TailwindCompnents/TailwindDarkmodeBtn";
+import TaillwindBtn from "./TailwindBtn";
+import TailwindDarkmodeBtn from "./TailwindDarkmodeBtn";
 
 function TaillwindPracice() {
   return (

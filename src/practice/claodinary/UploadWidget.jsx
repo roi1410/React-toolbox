@@ -27,11 +27,17 @@ function UploadWidget() {
 
   return (
     <>
-      <input type="file" onChange={handleFile} />
-      <button onClick={() => uploadImg()}>Upload</button>
-      <br />
-      <button onClick={() => console.log(url)}>Log URL</button>
-      <img src={url} alt="not working" />
+      <div className="flex flex-col gap-5">
+        <input type="file" onChange={handleFile} />
+        <button className="btn-primary" onClick={() => uploadImg()}>
+          Upload
+        </button>
+        <br />
+        <button className="btn-primary" onClick={() => console.log(url)}>
+          Log URL
+        </button>
+        {url && <img src={url.data.secure_url} alt="pls enter an img" />}
+      </div>
     </>
   );
 }
