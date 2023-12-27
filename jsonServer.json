@@ -1,0 +1,15 @@
+{
+  "posts": [
+    {
+      "vlaue": "roi reivo",
+      "id": 1
+    },
+    {
+      "vlaue": "test",
+      "id": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
