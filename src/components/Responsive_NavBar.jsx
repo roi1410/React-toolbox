@@ -14,6 +14,7 @@ const navigation = [
   { name: 'LocalStorege', to: 'LocalStorege' },
   {name:"APIAxius",to:"APIAxius"},
   {name:"DBmain",to:"DBmain"},
+  {name:"JsonServerMain",to:"JsonServerMain"},
   
 ]
 

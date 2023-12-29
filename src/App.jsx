@@ -17,6 +17,7 @@ import AxiosPost from "./practice/axios/AxiosPost";
 import DBmain from "./components/DB/DBmain";
 import UploadWidget from "./practice/claodinary/UploadWidget";
 import CloudinerySecWay from "./practice/claodinary/CloudinerySecWay";
+import JsonServerMain from "./practice/jsonServerEx/jsonServerMain";
 
 export const testcontext = createContext("");
 export const useCallback_Func = createContext("");
@@ -37,6 +38,8 @@ function App() {
 
               <Route path="taillwind" element={<TaillwindPracice />}></Route>
               {/* practice */}
+              <Route path ="jsonServerMain" element={<JsonServerMain/>}></Route>
+
               <Route path="APIAxius" element={<APIAxius />}>
                 <Route path="AxiousGet" element={<AxiosGet />}></Route>
                 <Route path="AxiousPost" element={<AxiosPost />}></Route>
