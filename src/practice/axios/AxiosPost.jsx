@@ -8,7 +8,9 @@ function AxiosPost() {
   const sendingData = { Name: "roi", lastName: "revivo" };
   const input=useRef()
 
+
   const postData = (input) => {
+    try{
     const sendObj={vlaue:input.current.value}
     
     axios
@@ -17,6 +19,9 @@ function AxiosPost() {
         console.log(res);
       })
       .catch((err) => {console.log(err)});
+    }catch(errr){
+      console.log(errr);
+    }
   };
   
     const fetchData = async () => {

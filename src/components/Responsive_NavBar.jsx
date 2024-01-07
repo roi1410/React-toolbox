@@ -15,6 +15,7 @@ const navigation = [
   {name:"APIAxius",to:"APIAxius"},
   {name:"DBmain",to:"DBmain"},
   {name:"JsonServerMain",to:"JsonServerMain"},
+  {name:"UseReducer",to:"UseReducer"},
   
 ]
 

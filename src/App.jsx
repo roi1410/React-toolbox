@@ -19,6 +19,10 @@ import UploadWidget from "./practice/claodinary/UploadWidget";
 import CloudinerySecWay from "./practice/claodinary/CloudinerySecWay";
 import JsonServerMain from "./practice/jsonServerEx/jsonServerMain";
 
+import UseReducer from "./practice/useReducer/UseReducer";
+import Counter from "./practice/useReducer/Counter";
+import UseRedocertodolist from "./practice/useReducer/UseRedocertodolist";
+
 export const testcontext = createContext("");
 export const useCallback_Func = createContext("");
 
@@ -39,6 +43,10 @@ function App() {
               <Route path="taillwind" element={<TaillwindPracice />}></Route>
               {/* practice */}
               <Route path ="jsonServerMain" element={<JsonServerMain/>}></Route>
+              <Route path="UseReducer" element={<UseReducer/>}>
+                <Route path="Counter" element= {<Counter/>}></Route>
+                <Route path="UseRedocertodolist" element= {<UseRedocertodolist/>}></Route>
+              </Route>
 
               <Route path="APIAxius" element={<APIAxius />}>
                 <Route path="AxiousGet" element={<AxiosGet />}></Route>

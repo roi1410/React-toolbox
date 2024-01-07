@@ -3,17 +3,24 @@ import { useEffect, useState } from "react";
 
 function AxiosGet() {
   const [Data, setData] = useState({});
-  useEffect(() => {
-    const fetchData = async () => {
-      const response = await axios.get(
-        "https://rickandmortyapi.com/api/character"
-      );
 
-      setData(response.data);
-    };
-    // if u wnat to active the condishinal rendering comment  fetchData(); 
-    fetchData();
-  }, []);
+  try {
+    useEffect(() => {
+      const fetchData = async () => {
+        const response = await axios.get(
+          "https://rickandmortyapi.com/api/character"
+        );
+
+        setData(response.data);
+      };
+      // if u wnat to active the condishinal rendering comment  fetchData();
+
+      fetchData();
+    }, []);
+  } catch (err) {
+    console.log(err);
+  }
+
   function isEmpty(obj) {
     return Object.keys(obj).length === 0;
   }
@@ -29,7 +36,9 @@ function AxiosGet() {
   } else {
     return (
       <>
-        <button className="btn-primary" onClick={() => console.log(Data)}>console.log(APIData)</button>
+        <button className="btn-primary" onClick={() => console.log(Data)}>
+          console.log(APIData)
+        </button>
         <img src={Data.results[1].image} />
       </>
     );

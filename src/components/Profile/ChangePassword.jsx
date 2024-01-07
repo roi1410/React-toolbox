@@ -8,16 +8,12 @@ function ChangePassword() {
     register,
     formState: { errors },
   } = useForm();
- 
- 
-  const [Password, setPassword] = useState("")
 
-const handleSubmitedForm=(data)=>{
-    setPassword(data)
+  const [Password, setPassword] = useState("");
 
-
-}
-
+  const handleSubmitedForm = (data) => {
+    setPassword(data);
+  };
 
   return (
     <>
@@ -59,10 +55,9 @@ const handleSubmitedForm=(data)=>{
                   <div className="relative w-full">
                     <input
                       className="block w-full border disabled:cursor-not-allowed disabled:opacity-50 bg-gray-50 border-gray-300 text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 rounded-lg p-2.5 text-sm"
-                      id="new-password"
+                    
                       name="new-password"
                       placeholder="••••••••"
-   
                       type="password"
                       {...register("new-password")}
                     />
@@ -72,36 +67,37 @@ const handleSubmitedForm=(data)=>{
 
               {/* <!-- Confirm Password --> */}
               <div className="col-span-6 grid grid-cols-1 gap-y-2 sm:col-span-3">
-
-              
-
-                
                 <label className="text-sm font-medium text-gray-900 dark:text-gray-300">
                   Confirm password
                 </label>
                 {errors.confirm_password?.message && (
-              <span className="text-red-500">{errors.confirm_password.message}</span>
-            )}
-                
+                  <span className="text-red-500">
+                    {errors.confirm_password.message}
+                  </span>
+                )}
+
                 <div className="flex">
                   <div className="relative w-full">
                     <input
                       className="block w-full border disabled:cursor-not-allowed disabled:opacity-50 bg-gray-50 border-gray-300 text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500 rounded-lg p-2.5 text-sm"
-                      id="confirm-password"
+                      
                       name="confirm-password"
                       placeholder="••••••••"
                       type="password"
-                      {...register("confirm_password",{required:"password is requierd",validate:{
-                        consfirmPassword:(v)=>{if (watch('new-password')!==v) {
-                            return "the password isnt mach "}
-                        }
-                        
-                      }})}
+                      {...register("confirm_password", {
+                        required: "password is requierd",
+                        validate: {
+                          consfirmPassword: (v) => {
+                            if (watch("new-password") !== v) {
+                              return "the password isnt mach ";
+                            }
+                          },
+                        },
+                      })}
                     />
                   </div>
                 </div>
               </div>
-          
 
               {/* <!-- Password Requirements --> */}
               <div className="col-span-full">
@@ -138,7 +134,9 @@ const handleSubmitedForm=(data)=>{
               </div>
             </div>
           </form>
-                <button onClick={()=>console.log(Password)} className="primay-btn">test</button>
+          <button onClick={() => console.log(Password)} className="primay-btn">
+            test
+          </button>
         </div>
       </div>
     </>
