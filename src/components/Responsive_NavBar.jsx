@@ -16,6 +16,8 @@ const navigation = [
   {name:"DBmain",to:"DBmain"},
   {name:"JsonServerMain",to:"JsonServerMain"},
   {name:"UseReducer",to:"UseReducer"},
+  {name:"selnium",to:"selnium"},
+
   
 ]
 

@@ -1,0 +1,1 @@
+ets a sticky timeout to implicitly wait for an element to be found"

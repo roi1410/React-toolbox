@@ -22,6 +22,8 @@ import JsonServerMain from "./practice/jsonServerEx/jsonServerMain";
 import UseReducer from "./practice/useReducer/UseReducer";
 import Counter from "./practice/useReducer/Counter";
 import UseRedocertodolist from "./practice/useReducer/UseRedocertodolist";
+import Selenium from "./practice/selenium/Selenium";
+
 
 export const testcontext = createContext("");
 export const useCallback_Func = createContext("");
@@ -63,6 +65,10 @@ function App() {
               </Route>
 
               <Route path="LocalStorege" element={<LocalStorege />}></Route>
+              {/* selnium pyhon tedting playgrownd */}
+              <Route path="selnium" element={<Selenium/>} ></Route>
+
+
             </Route>
           </Routes>
         </BrowserRouter>
