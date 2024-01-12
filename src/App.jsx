@@ -23,6 +23,7 @@ import UseReducer from "./practice/useReducer/UseReducer";
 import Counter from "./practice/useReducer/Counter";
 import UseRedocertodolist from "./practice/useReducer/UseRedocertodolist";
 import Selenium from "./practice/selenium/Selenium";
+import CodeShowCase from "./components/CodeShowCase";
 
 
 export const testcontext = createContext("");
@@ -41,6 +42,7 @@ function App() {
               <Route path="profile" element={<Profile />}>
                 <Route path="ProfileSetting" element={<ProfileSetting />} />
               </Route>
+              <Route path="CodeShowCase" element={<CodeShowCase code={`here we can paste the code `}/>}></Route>
 
               <Route path="taillwind" element={<TaillwindPracice />}></Route>
               {/* practice */}
