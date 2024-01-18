@@ -1,7 +1,11 @@
 import axios from "axios";
 import React, { useState } from "react";
+import ToggleSwich from "../../components/ToggleSwich";
+import CodeShowCase from "../../components/CodeShowCase";
+import {code } from "./../../../codeShowDB.json"
 
 function UploadWidget() {
+  
   const [selectedImage, setSelectedImage] = useState(null);
   const [url, setUrl] = useState("");
 
@@ -25,21 +29,39 @@ function UploadWidget() {
     }
   };
 
-  return (
-    <>
-      <div className="flex flex-col gap-5">
-        <input type="file" onChange={handleFile} />
-        <button className="btn-primary" onClick={() => uploadImg()}>
-          Upload
-        </button>
-        <br />
-        <button className="btn-primary" onClick={() => console.log(url)}>
-          Log URL
-        </button>
-        {url && <img src={url.data.secure_url} alt="pls enter an img" />}
-      </div>
-    </>
-  );
+  const [displaycode, setDisplaycode] = useState(true);
+
+  if (displaycode) {
+    return (
+      <>
+        {/* check if the toggle will Efect the other componenets  */}
+        <ToggleSwich
+          setDisplaycode={setDisplaycode}
+          displaycode={displaycode}
+        />
+        <div className="flex flex-col gap-5">
+          <input type="file" onChange={handleFile} />
+          <button className="btn-primary" onClick={() => uploadImg()}>
+            Upload
+          </button>
+          <br />
+          <button className="btn-primary" onClick={() => console.log(url)}>
+            Log URL
+          </button>
+          {url && <img src={url.data.secure_url} alt="pls enter an img" />}
+        </div>
+      </>
+    );
+  } else {
+    return <>
+    <ToggleSwich
+          setDisplaycode={setDisplaycode}
+          displaycode={displaycode}
+        />
+        <CodeShowCase code={code.UploadWidget}/>
+
+    </>;
+  }
 }
 
 export default UploadWidget;

@@ -1,4 +1,6 @@
 import React, { useRef, useEffect } from "react";
+import CodeShowCase from "../../components/CodeShowCase";
+import {code } from "./../../../codeShowDB.json"
 
 function CloudinerySecWay() {
   const cloudName = "sxbyje53";
@@ -21,9 +23,12 @@ function CloudinerySecWay() {
   }
 
   return (
+    <>
     <button className="btn-primary" onClick={() => handleUplode()}>
       upload
     </button>
+    <CodeShowCase code={code.CloudinerySecWay}/>
+    </>
   );
 }
 

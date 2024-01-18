@@ -1,34 +1,35 @@
-import { useState } from 'react'
-import { Dialog } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { Link } from 'react-router-dom'
-// heare i can add links to the nav bar 
+import { useState } from "react";
+import { Dialog } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
+// heare i can add links to the nav bar
 const navigation = [
-  { name: 'Hearo', to: '/' },
-  { name: 'Profile', to: 'Profile' },
-  { name: 'DropdownMenu', to: 'DropdownMenu' },
-  { name: 'taillwind', to: 'taillwind' },
-  { name: 'useCallback', to: 'useCallback' },
-  { name: 'AllForms', to: 'AllForms' },
-  { name: 'Cloudinary', to: 'Cloudinary' },
-  { name: 'LocalStorege', to: 'LocalStorege' },
-  {name:"APIAxius",to:"APIAxius"},
-  {name:"DBmain",to:"DBmain"},
-  {name:"JsonServerMain",to:"JsonServerMain"},
-  {name:"UseReducer",to:"UseReducer"},
-  {name:"selnium",to:"selnium"},
-  {name:"CodeShowCase",to:"CodeShowCase"},
-
-  
-]
+  { name: "Hearo", to: "/" },
+  { name: "Profile", to: "Profile" },
+  { name: "DropdownMenu", to: "DropdownMenu" },
+  { name: "taillwind", to: "taillwind" },
+  { name: "useCallback", to: "useCallback" },
+  { name: "AllForms", to: "AllForms" },
+  { name: "Cloudinary", to: "Cloudinary" },
+  { name: "LocalStorege", to: "LocalStorege" },
+  { name: "APIAxius", to: "APIAxius" },
+  { name: "DBmain", to: "DBmain" },
+  { name: "JsonServerMain", to: "JsonServerMain" },
+  { name: "UseReducer", to: "UseReducer" },
+  { name: "selnium", to: "selnium" },
+  { name: "CodeShowCase", to: "CodeShowCase" },
+];
 
 export default function NavBar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <>
-    <header className="fix inset-x-0 top-0 dark:bg-black ">
-        <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <header className="fix inset-x-0 top-0 dark:bg-black ">
+        <nav
+          className="flex items-center justify-between p-6 lg:px-8"
+          aria-label="Global"
+        >
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
@@ -51,18 +52,30 @@ export default function NavBar() {
           </div>
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-              <Link key={item.name} to={item.to} className="text-sm font-semibold leading-6 text-gray-900">
+              <Link
+                key={item.name}
+                to={item.to}
+                className="text-sm font-semibold leading-6 text-gray-900"
+              >
                 {item.name}
               </Link>
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+            <a
+              href="#"
+              className="text-sm font-semibold leading-6 text-gray-900"
+            >
               Log in <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
         </nav>
-        <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+        <Dialog
+          as="div"
+          className="lg:hidden"
+          open={mobileMenuOpen}
+          onClose={setMobileMenuOpen}
+        >
           <div className="fixed inset-0" />
           <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             {/* logo */}
@@ -99,19 +112,13 @@ export default function NavBar() {
                   ))}
                 </div>
                 <div className="py-6">
-                  <a
-                    href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >
-                    Log in
-                  </a>
+                  
                 </div>
               </div>
             </div>
           </Dialog.Panel>
         </Dialog>
       </header>
-     
-   </>
-  )
+    </>
+  );
 }

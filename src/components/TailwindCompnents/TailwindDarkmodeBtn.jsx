@@ -5,7 +5,7 @@ function TailwindDarkmodeBtn() {
   const dark = useRef();
 
   useEffect(() => {
-     // in index.html on the body we add className "dark"
+    // in index.html on the body we add className "dark"
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
     } else {
@@ -24,10 +24,6 @@ function TailwindDarkmodeBtn() {
     >
       dark modebtn
     </button>
-   
-    
-    
-
   );
 }
 

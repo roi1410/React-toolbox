@@ -1,8 +1,13 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import ToggleSwich from "../../components/ToggleSwich";
+import CodeShowCase from "../../components/CodeShowCase"
+import {code} from "./../../../codeShowDB.json"
+
 
 function AxiosGet() {
   const [Data, setData] = useState({});
+  const [displaycode, setDisplaycode] = useState(true);
 
   try {
     useEffect(() => {
@@ -24,22 +29,40 @@ function AxiosGet() {
   function isEmpty(obj) {
     return Object.keys(obj).length === 0;
   }
-
-  if (isEmpty(Data)) {
-    return (
-      <>
-        <div className="flex justify-center items-center ">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-900"></div>
-        </div>
-      </>
-    );
+  if (displaycode) {
+    if (isEmpty(Data)) {
+      return (
+        <>
+          
+          <div className="flex justify-center items-center ">
+            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-900"></div>
+          </div>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <ToggleSwich
+            setDisplaycode={setDisplaycode}
+            displaycode={displaycode}
+          />
+          <button className="btn-primary" onClick={() => console.log(Data)}>
+            console.log(APIData)
+          </button>
+          <img src={Data.results[1].image} />
+        </>
+      );
+    }
   } else {
     return (
       <>
-        <button className="btn-primary" onClick={() => console.log(Data)}>
-          console.log(APIData)
-        </button>
-        <img src={Data.results[1].image} />
+        <ToggleSwich
+          setDisplaycode={setDisplaycode}
+          displaycode={displaycode}
+        />
+        <CodeShowCase
+          code={code.AxiosGet}
+        />
       </>
     );
   }
