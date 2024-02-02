@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import CodeShowCase from "../CodeShowCase";
 import ToggleSwich from "../ToggleSwich";
 import { useState } from "react";
 import { code } from "./../../../codeShowDB.json";
+import { allContext } from "../../MainContax";
+
 
 function ChangePicture() {
+  const {test}=useContext(allContext)
   const [displaycode, setDisplaycode] = useState(true);
   if (displaycode) {
     return (
@@ -13,10 +16,12 @@ function ChangePicture() {
           setDisplaycode={setDisplaycode}
           displaycode={displaycode}
         />
+
         <div
           className="flex rounded-lg border border-gray-200 bg-white shadow-md dark:border-gray-700 dark:bg-gray-800 flex-col"
           data-testid="flowbite-card"
         >
+          <button onClick={()=>console.log(test)}>test</button>
           <div className="flex h-full flex-col justify-center gap-4 p-6">
             <div className="items-center sm:flex sm:space-x-4 xl:block xl:space-x-0 2xl:flex 2xl:space-x-4">
               <img
