@@ -1,10 +1,10 @@
 import { createContext, useState, useCallback } from "react";
 import DropdownMenu from "./components/DropdownMenu";
-import Hearo from "./components/hearo";
+import Hearo from "./components/Hearo";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./components/Responsive_NavBar";
 import TaillwindPracice from "./components/TailwindCompnents/TailwindPractice";
-import UseCallback from "./practice/useCallback";
+import UseCallback from "./practice/UseCallback";
 import Layout from "./Layout";
 import AllForms from "./components/FormComponents/AllForms";
 import Cloudinary_practice from "./practice/claodinary/Cloudinary";
@@ -17,7 +17,7 @@ import AxiosPost from "./practice/axios/AxiosPost";
 import DBmain from "./components/DB/DBmain";
 import UploadWidget from "./practice/claodinary/UploadWidget";
 import CloudinerySecWay from "./practice/claodinary/CloudinerySecWay";
-import JsonServerMain from "./practice/jsonServerEx/jsonServerMain";
+import JsonServerMain from "./practice/jsonServerEx/JsonServerMain";
 
 import UseReducer from "./practice/useReducer/UseReducer";
 import Counter from "./practice/useReducer/Counter";
